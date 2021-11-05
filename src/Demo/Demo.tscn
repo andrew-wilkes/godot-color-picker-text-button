@@ -1,0 +1,60 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://addons/color_picker_text_button/color_picker_text_button.gd" type="Script" id=1]
+[ext_resource path="res://Demo/Demo.gd" type="Script" id=2]
+[ext_resource path="res://addons/color_picker_text_button/styleboxflat.tres" type="StyleBox" id=3]
+[ext_resource path="res://Demo/font/Bebas-Regular.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.9, 0.9, 0.9, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.81, 0.81, 0.81, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="DynamicFont" id=3]
+size = 32
+font_data = ExtResource( 4 )
+
+[node name="Demo" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -1.0
+margin_top = 1.0
+margin_right = -1.0
+margin_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorPickerTextButton" type="Button" parent="."]
+margin_left = 40.0
+margin_top = 95.0
+margin_right = 240.0
+margin_bottom = 155.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/normal = ExtResource( 3 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+style = ExtResource( 3 )
+custom_font = SubResource( 3 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 300.0
+margin_top = 74.0
+margin_right = 432.0
+margin_bottom = 187.0
+
+[connection signal="color_changed" from="ColorPickerTextButton" to="." method="_on_ColorPickerTextButton_color_changed"]
+[connection signal="popup_hide" from="ColorPickerTextButton" to="." method="_on_ColorPickerTextButton_popup_hide"]

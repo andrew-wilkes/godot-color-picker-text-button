@@ -9,5 +9,7 @@
 /src/project.godot      export-ignore
 /src/icon.png           export-ignore
 /src/icon.png.import    export-ignore
-/src/Demo.tscn   export-ignore
+/src/Demo   export-ignore
 /icon.svg   export-ignore
+/copyfiles
+/tests.md

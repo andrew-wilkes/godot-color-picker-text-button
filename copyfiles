@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Copy files to plugin folder
+cp -uf LICENSE src/addons/color_picker_text_button
+cp -uf README.md src/addons/color_picker_text_button

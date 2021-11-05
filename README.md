@@ -14,4 +14,15 @@ Activate the plugin in Project Settings.
 
 After adding a ColorPickerTextButton node to your scene, you may customize the Script Variables in the Inspector panel. 
 
-The label text is changed via the Text Value variable, and the Button text value is ignored.
+The label text is changed via the Text Value variable, and the Button text value is deleted/ignored.
+
+To confirm a color selection click outside the color picker panel.
+
+To change the Button Style, uncheck the boxes in Button Custom Styles and click the reset button for the Style Script Variable. Then create a new StyleBox Resource.
+
+## Signals
+
+* popup_hide - emitted when the popup panel is closed
+* color_changed(color) - emitted as the selected color is changed
+
+Other signals are as per the **Button** Node.
