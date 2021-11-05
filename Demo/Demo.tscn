@@ -36,10 +36,10 @@ __meta__ = {
 }
 
 [node name="ColorPickerTextButton" type="Button" parent="."]
-margin_left = 26.0
-margin_top = 105.0
-margin_right = 226.0
-margin_bottom = 165.0
+margin_left = 20.0
+margin_top = 10.0
+margin_right = 220.0
+margin_bottom = 70.0
 custom_styles/hover = SubResource( 1 )
 custom_styles/pressed = SubResource( 2 )
 custom_styles/normal = ExtResource( 3 )
@@ -51,10 +51,13 @@ style = ExtResource( 3 )
 custom_font = SubResource( 3 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
-margin_left = 300.0
-margin_top = 74.0
-margin_right = 432.0
-margin_bottom = 187.0
+margin_left = 44.0
+margin_top = 126.0
+margin_right = 176.0
+margin_bottom = 239.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [connection signal="color_changed" from="ColorPickerTextButton" to="." method="_on_ColorPickerTextButton_color_changed"]
 [connection signal="popup_hide" from="ColorPickerTextButton" to="." method="_on_ColorPickerTextButton_popup_hide"]

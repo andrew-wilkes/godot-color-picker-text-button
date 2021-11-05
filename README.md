@@ -1,6 +1,8 @@
 # Color Picker Text Button
 Plugin for a custom node similar to the ColorPickerButton node but with a text label.
 
+![Screen Shot](screenshot.png)
+
 ## Features of the button
 
 * it uses a white style box that is modulated with the picked color
