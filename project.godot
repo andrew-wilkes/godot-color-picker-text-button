@@ -16,7 +16,7 @@ config/icon="res://addons/color_picker_text_button/icon.png"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/color-picker-text-button/plugin.cfg", "res://addons/color_picker_text_button/plugin.cfg" )
+enabled=PoolStringArray( "res://addons/color_picker_text_button/plugin.cfg" )
 
 [physics]
 

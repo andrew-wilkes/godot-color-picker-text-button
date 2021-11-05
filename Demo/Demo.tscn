@@ -36,10 +36,10 @@ __meta__ = {
 }
 
 [node name="ColorPickerTextButton" type="Button" parent="."]
-margin_left = 40.0
-margin_top = 95.0
-margin_right = 240.0
-margin_bottom = 155.0
+margin_left = 26.0
+margin_top = 105.0
+margin_right = 226.0
+margin_bottom = 165.0
 custom_styles/hover = SubResource( 1 )
 custom_styles/pressed = SubResource( 2 )
 custom_styles/normal = ExtResource( 3 )
