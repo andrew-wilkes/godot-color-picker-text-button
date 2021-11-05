@@ -11,6 +11,6 @@
 /icon.svg.import    export-ignore
 /Demo               export-ignore
 /copyfiles          export-ignore
-/tests.md           export-ignore
+/TESTS.md           export-ignore
 /default_env.tres   export-ignore
 /*.png*             export-ignore
