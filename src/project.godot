@@ -1,0 +1,27 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+[application]
+
+config/name="Color Picker Text Button"
+run/main_scene="res://Demo.tscn"
+config/icon="res://addons/color_picker_text_button/icon.png"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/color-picker-text-button/plugin.cfg", "res://addons/color_picker_text_button/plugin.cfg" )
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"
