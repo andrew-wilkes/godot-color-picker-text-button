@@ -18,9 +18,11 @@ After adding a ColorPickerTextButton node to your scene, you may customize the S
 
 The label text is changed via the Text Value variable, and the Button text value is deleted/ignored.
 
-To confirm a color selection click outside the color picker panel.
+To confirm a color selection, click outside the color picker panel.
 
-To change the Button Style, uncheck the boxes in Button Custom Styles and click the reset button for the Style Script Variable. Then create a new StyleBox Resource.
+To reset the Button Style, uncheck the boxes in Button Custom Styles and click the reset button for the Style Script Variable.
+
+Drop a new StyleBox Resource into the Style Script Variable entry box to change the Button Styles.
 
 ## Signals
 
