@@ -8,6 +8,7 @@ export var text_value = "Click Me" setget set_label_text
 export(StyleBoxFlat) var style setget set_styles
 export(float, 0.1, 0.8) var mouseover_darkening_factor = 0.1
 export(DynamicFont) var custom_font
+export(Color) var color
 export(Color) var light_text_color = Color.white
 export(Color) var dark_text_color = Color.black
 export(float, 0.2, 0.8) var text_color_flip_threshold = 0.5
@@ -26,6 +27,7 @@ func _ready():
 	panel = PopupPanel.new()
 	add_child(panel)
 	color_picker = ColorPicker.new()
+	color_picker.color = color
 	panel.add_child(color_picker)
 
 	# Connect signals
@@ -45,6 +47,7 @@ func _ready():
 	if Engine.editor_hint:
 		self.style = load("res://addons/color_picker_text_button/styleboxflat.tres")
 		rect_position = Vector2(20, 10)
+		color = Color.white
 
 	setup_label()
 
@@ -59,7 +62,7 @@ func setup_label():
 	call_deferred("init_size")
 	label.text = text_value
 	text = ""
-	set_colors(Color.white)
+	set_colors(color)
 	center.mouse_filter = MOUSE_FILTER_PASS
 	center.visible = enable_text
 
@@ -118,6 +121,7 @@ func panel_closed():
 func set_colors(c):
 	emit_signal("color_changed", c)
 	self_modulate = c
+	color = c
 	var grey_value = (c.r + c.g + c.b) / 3
 	if grey_value > text_color_flip_threshold:
 		label.set("custom_colors/font_color", dark_text_color)
