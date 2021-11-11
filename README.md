@@ -5,7 +5,7 @@ Plugin for a custom node similar to the ColorPickerButton node but with a text l
 
 ## Features of the button
 
-* it uses a white style box that is modulated with the picked color
+* it uses a style box that is modulated with the picked color
 * the color of the text is flipped between a light and dark color to give good contrast with the background color
 * the color picker is simplified by default, removing the sliders
 * a tool script automatically copies the style and darkens the shade for the button states
