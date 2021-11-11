@@ -15,6 +15,7 @@ export(float, 0.2, 0.8) var text_color_flip_threshold = 0.5
 export var popup_centered = true
 export var simple_color_picker = true
 export var enable_text = true setget show_hide_label
+export var fresh = true
 
 var panel
 var color_picker
@@ -46,7 +47,7 @@ func _ready():
 	panel.rect_size.y = 0
 
 	# Initially style the button
-	if Engine.editor_hint and style == null:
+	if Engine.editor_hint and fresh:
 		self.style = load("res://addons/color_picker_text_button/styleboxflat.tres")
 		rect_position = Vector2(20, 10)
 
@@ -79,8 +80,9 @@ func rect_changed():
 
 
 func init_size():
-	if Engine.editor_hint:
+	if Engine.editor_hint and fresh:
 		rect_size = Vector2(200, 60)
+		fresh = false
 	rect_changed()
 
 

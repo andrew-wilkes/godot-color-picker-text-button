@@ -24,6 +24,8 @@ To reset the Button Style, uncheck the boxes in Button Custom Styles and click t
 
 Drop a new StyleBox Resource into the Style Script Variable entry box to change the Button Styles.
 
+The `fresh` property is used as a flag to indicate to the script that the button is new and may be initialized with a size and style.
+
 ## Signals
 
 * popup_hide - emitted when the popup panel is closed

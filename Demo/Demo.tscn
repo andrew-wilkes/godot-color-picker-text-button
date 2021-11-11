@@ -48,6 +48,7 @@ __meta__ = {
 style = ExtResource( 3 )
 custom_font = SubResource( 3 )
 color = Color( 0.0862745, 0.478431, 0.52549, 1 )
+fresh = false
 
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_left = 44.0
